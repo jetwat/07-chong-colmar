@@ -1,26 +1,50 @@
-nav {
-  height: 64px;
-  display: flex;
-  justify-content: space-around;
-  gap: 16px;
-  /* ใช้ stretch เพื่อให้ .card (ตัว <a>) สูงเต็ม 64px เท่า nav */
-  align-items: stretch;
-  padding: 0px 24px;
-  box-sizing: border-box;
+@media (max-width: 767px) {
+  nav div.mobile {
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+  nav div.desktop {
+    display: none;
+  }
 }
 
-.card {
-  /* บังคับให้กล่อง <a> สูงเท่า nav */
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (min-width: 768px) {
+  nav div.mobile {
+    display: none;
+  }
+  nav div.desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+  }
 }
 
-.card img {
-  /* นี่คือส่วนสำคัญ: บังคับให้รูปสูง 100% ของ .card (ซึ่งก็คือ 64px) */
+nav img {
   height: 100%;
-  width: auto; /* ปรับความกว้างออโต้เพื่อไม่ให้รูปเบี้ยว */
+  width: auto;
   display: block;
 }
 
