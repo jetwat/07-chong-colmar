@@ -1,3 +1,29 @@
+nav {
+  height: 64px;
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  /* ใช้ stretch เพื่อให้ .card (ตัว <a>) สูงเต็ม 64px เท่า nav */
+  align-items: stretch;
+  padding: 0px 24px;
+  box-sizing: border-box;
+}
+
+.card {
+  /* บังคับให้กล่อง <a> สูงเท่า nav */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  /* นี่คือส่วนสำคัญ: บังคับให้รูปสูง 100% ของ .card (ซึ่งก็คือ 64px) */
+  height: 100%;
+  width: auto; /* ปรับความกว้างออโต้เพื่อไม่ให้รูปเบี้ยว */
+  display: block;
+}
+
 .hero {
   display: flex;
 }
