@@ -210,6 +210,7 @@ nav img {
     width: 100%;
     height: auto;
     box-sizing: border-box;
+    border: double gray;
 
     display: flex;
     justify-content: stretch;
@@ -239,6 +240,7 @@ nav img {
 
 .info-desktop-small {
   padding-top: 28px;
+  padding-bottom: 32px;
   width: 40%;
   height: auto;
   box-sizing: border-box;
