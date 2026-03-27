@@ -1,10 +1,24 @@
+/* all part */
+* {
+  margin: 0;
+}
+/* 
+
+
+
+*/
+/* nav bar */
+nav {
+  background-color: #ffffff;
+}
+
 @media (max-width: 767px) {
   nav div.mobile {
     height: 64px;
+    padding: 16px 24px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
-    background-color: #ffffff;
-    box-sizing: border-box;
   }
   nav div.desktop {
     display: none;
@@ -22,7 +36,6 @@
     height: 64px;
     padding: 16px 24px;
     box-sizing: border-box;
-    background-color: #ffffff;
   }
 
   .nav-logo {
@@ -47,19 +60,118 @@ nav img {
   width: auto;
   display: block;
 }
+/* 
 
-.hero {
-  display: flex;
+
+
+*/
+/* hero */
+@media (max-width: 767px) {
+  .hero-dt [class^="dt"] {
+    display: none;
+  }
+  .hero-mb {
+    display: flex;
+    background-color: darkgrey;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 32px;
+    gap: 32px;
+  }
+  .hero-mb > [class^="mb"]:not(.mb-third) {
+    display: flex;
+  }
+  .hero-mb .mb-third {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .hero-mb [class^="mb"] img {
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  .hero-mb > [class^="mb"] > *:not(img) {
+    padding: 0px 16px;
+  }
+  .hero-mb > [class^="mb"] > .mb-third__two {
+    text-align: center;
+    background-color: orange;
+    margin: 0px 16px;
+    padding: 8px 0px;
+  }
 }
+@media (min-width: 768px) {
+  .hero-mb [class^="mb"] {
+    display: none;
+  }
+  .hero-dt {
+    max-width: 2000;
+    display: flex;
+    background-color: gray;
+  }
+  .hero.dt > [class^="dt"] {
+    display: flex;
+  }
 
+  .hero-dt > :nth-child(1) {
+    width: 60%;
+    padding: 32px 24px;
+    box-sizing: border-box;
+  }
+
+  .hero-dt > :nth-child(1) img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-dt > :nth-child(2) {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-dt > :nth-child(2) > * {
+    width: 80%;
+  }
+  .hero-dt > :nth-child(2) > :nth-child(1) {
+    padding-bottom: 32px;
+  }
+  .hero-dt > :nth-child(2) > :nth-child(2) {
+    padding-bottom: 24px;
+  }
+  .hero-dt > :nth-child(2) > :nth-child(3) {
+    text-align: center;
+    padding: 8px 0px;
+    background-color: orange;
+  }
+}
+/* 
+
+
+
+*/
+/* info */
 .information {
   display: flex;
 }
+/* 
 
+
+
+*/
+/* course */
 .course {
   display: flex;
 }
+/* 
 
+
+
+*/
+/* thesis */
 .thesis {
   display: flex;
 }
